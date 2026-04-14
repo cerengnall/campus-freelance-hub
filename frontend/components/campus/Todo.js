@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { addTodo, listTodos } from "../../../backend/campus/todo";
 
 const wrapperStyle = {
   backgroundColor: "#ffffff",
@@ -58,6 +59,10 @@ function Todo() {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
 
+  useEffect(() => {
+    setTasks(listTodos());
+  }, []);
+
   const handleAddTask = () => {
     const trimmedTask = task.trim();
 
@@ -65,7 +70,8 @@ function Todo() {
       return;
     }
 
-    setTasks((prevTasks) => [...prevTasks, trimmedTask]);
+    addTodo(trimmedTask);
+    setTasks(listTodos());
     setTask("");
   };
 
@@ -87,9 +93,9 @@ function Todo() {
       </div>
 
       <ul style={listStyle}>
-        {tasks.map((item, index) => (
-          <li key={`${item}-${index}`} style={itemStyle}>
-            {item}
+        {tasks.map((item) => (
+          <li key={item.id} style={itemStyle}>
+            {item.title}
           </li>
         ))}
       </ul>
