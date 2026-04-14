@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ApplyButton from "./ApplyButton.js";
 
 const DUMMY_TASKS = [
   { id: "1", label: "Task 1" },
@@ -28,6 +29,7 @@ export default function TaskList() {
                 {task.label}
               </span>
             </label>
+            <ApplyButton taskId={task.id} userId="user-001" />
           </li>
         );
       })}
@@ -42,6 +44,10 @@ const styles = {
     margin: 0,
   },
   item: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: 12,
     marginBottom: 8,
   },
   label: {
