@@ -1,5 +1,6 @@
-const DEADLINE = {
-  deadline: "YYYY-MM-DD"
+const TASK_WITH_DEADLINE = {
+  title: "Task 1",
+  deadline: "2026-04-20"
 };
 
-module.exports = DEADLINE;
+module.exports = TASK_WITH_DEADLINE;
