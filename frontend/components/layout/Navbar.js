@@ -14,11 +14,12 @@ export default function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
-      <nav className="relative mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:h-16 sm:px-6 lg:px-8">
+    <>
+      <header className="navbar sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
+        <nav className="relative mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:h-16 sm:px-6 lg:px-8">
         <a
           href="#"
-          className="shrink-0 text-lg font-semibold tracking-tight text-slate-900 transition hover:text-slate-700"
+          className="brand shrink-0 text-lg font-semibold tracking-tight text-slate-900 transition hover:text-slate-700"
         >
           Campus Hub
         </a>
@@ -83,34 +84,46 @@ export default function Navbar() {
             )}
           </button>
         </div>
-      </nav>
+        </nav>
 
-      {menuOpen && (
-        <div className="border-t border-slate-200/80 bg-white md:hidden">
-          <div className="mx-auto max-w-6xl space-y-1 px-4 py-3 sm:px-6">
-            {NAV_LINKS.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
-                onClick={() => setMenuOpen(false)}
+        {menuOpen && (
+          <div className="border-t border-slate-200/80 bg-white md:hidden">
+            <div className="mx-auto max-w-6xl space-y-1 px-4 py-3 sm:px-6">
+              {NAV_LINKS.map(({ label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-100"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {label}
+                </a>
+              ))}
+              <button
+                type="button"
+                onClick={() => {
+                  setIsLoggedIn((v) => !v);
+                  setMenuOpen(false);
+                }}
+                className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50"
               >
-                {label}
-              </a>
-            ))}
-            <button
-              type="button"
-              onClick={() => {
-                setIsLoggedIn((v) => !v);
-                setMenuOpen(false);
-              }}
-              className="mt-2 w-full rounded-lg border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:bg-slate-50"
-            >
-              {isLoggedIn ? "Logout" : "Login"}
-            </button>
+                {isLoggedIn ? "Logout" : "Login"}
+              </button>
+            </div>
           </div>
-        </div>
-      )}
-    </header>
+        )}
+      </header>
+
+      <style jsx>{`
+        @media (max-width: 767px) {
+          .navbar .brand {
+            max-width: calc(100vw - 110px);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      `}</style>
+    </>
   );
 }
