@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ana sayfa — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li>
+            <a href="index.html" class="is-active" aria-current="page"
+              >Ana sayfa</a
+            >
+          </li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html" class="is-active" aria-current="page">Ana sayfa</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ilanlar.html">İlanlar</a>
+        <a href="gorevler.html">Görevler</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="profil.html">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html" class="is-active" aria-current="page"
+              >Ana sayfa</a
+            >
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="gorevler.html">Görevler</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="profil.html">Profil</a>
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <section class="hero" aria-labelledby="hero-title">
+            <h1 id="hero-title">Kampüste iş birliği, tek yerde</h1>
+            <p>
+              Campus Hub; öğrenci kulüpleri, bireysel ilanlar ve kampüs
+              etkinliklerini bir araya getiren sunum amaçlı statik demo arayüz.
+              Gerçek uygulama değildir.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="dashboard.html">Dashboard’a git</a>
+              <a class="btn" href="ilanlar.html">İlanlara göz at</a>
+              <a class="btn btn-ghost" href="giris.html">Demo giriş</a>
+            </div>
+          </section>
+
+          <h2 class="page-title" style="font-size: 1.15rem">Neler sunuyoruz?</h2>
+          <p class="page-sub">
+            Kısa tur: pano özeti, ilan vitrini, kişisel görevler ve kampüs
+            takvimi — tümü tıklanabilir statik sayfalar.
+          </p>
+
+          <div class="feature-grid">
+            <a class="feature-card" href="dashboard.html">
+              <h3>Canlı dashboard</h3>
+              <p>Özet metin, istatistikler ve öne çıkan görevler bir arada.</p>
+            </a>
+            <a class="feature-card" href="ilanlar.html">
+              <h3>İlan vitrini</h3>
+              <p>Kategori ve ücret etiketli kartlar; detay için bağlantılar.</p>
+            </a>
+            <a class="feature-card" href="etkinlikler.html">
+              <h3>Etkinlik akışı</h3>
+              <p>Yaklaşan konferans, kulüp gecesi ve atölye kartları.</p>
+            </a>
+            <a class="feature-card" href="gorevler.html">
+              <h3>Görev panosu</h3>
+              <p>Durum rozetleriyle yapılacak ve devam eden işler.</p>
+            </a>
+          </div>
+
+          <div class="stats-row" style="margin-top: 2rem" aria-label="Örnek rakamlar">
+            <div class="stat-card">
+              <div class="label">Aktif ilan</div>
+              <div class="value">48</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Tamamlanan iş</div>
+              <div class="value">126</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Kulüp ortağı</div>
+              <div class="value">14</div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

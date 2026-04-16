@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>İlanlar — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li>
+            <a href="ilanlar.html" class="is-active" aria-current="page"
+              >İlanlar</a
+            >
+          </li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ilanlar.html" class="is-active" aria-current="page">İlanlar</a>
+        <a href="gorevler.html">Görevler</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="profil.html">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html">Ana sayfa</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ilanlar.html" class="is-active" aria-current="page"
+              >İlanlar</a
+            >
+            <a href="gorevler.html">Görevler</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="profil.html">Profil</a>
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <h1 class="page-title">İlanlar</h1>
+          <p class="page-sub">
+            Kampüs içi freelance ve küçük iş ilanları. Kartlara tıklayarak
+            örnek detay sayfasına gidebilirsiniz.
+          </p>
+
+          <div class="filter-row" aria-label="Örnek kategori filtreleri (statik)">
+            <span class="filter-chip">Tümü</span>
+            <span class="filter-chip">Tasarım</span>
+            <span class="filter-chip">Yazılım</span>
+            <span class="filter-chip">İçerik</span>
+            <span class="filter-chip">Etkinlik</span>
+            <span class="filter-chip">₺500 altı</span>
+          </div>
+
+          <div class="card-grid" id="list">
+            <a class="listing-card" href="task-detail.html?id=1">
+              <h3>Kulüp logosu ve sosyal medya görseli</h3>
+              <p>
+                Robotik kulübü; vektör logo, renk varyantları ve sosyal şablonlar.
+              </p>
+              <div class="listing-meta">
+                <span class="tag tag-purple">Tasarım</span>
+                <span class="tag tag-open">Açık</span>
+                <span class="price-tag">₺800–1200</span>
+              </div>
+            </a>
+            <a class="listing-card" href="task-detail.html?id=2">
+              <h3>Ders notu düzenleme (PDF)</h3>
+              <p>
+                İktisat 201; 120 sayfa taranmış not, başlıklandırma ve OCR sonrası
+                düzeltme.
+              </p>
+              <div class="listing-meta">
+                <span class="tag">Düzenleme</span>
+                <span class="tag tag-open">Açık</span>
+                <span class="price-tag">₺400</span>
+              </div>
+            </a>
+            <a class="listing-card" href="task-detail.html?id=3">
+              <h3>Konferans afişi — acil</h3>
+              <p>
+                A3 baskı; konuşmacı fotoğrafları ve sponsor logoları iletişimden
+                gelecek.
+              </p>
+              <div class="listing-meta">
+                <span class="tag tag-purple">Baskı</span>
+                <span class="tag tag-urgent">Acil</span>
+                <span class="price-tag">₺600</span>
+              </div>
+            </a>
+            <a class="listing-card" href="task-detail.html?id=4">
+              <h3>Web sitesi metin düzeltisi</h3>
+              <p>
+                Öğrenci topluluğu statik sitesi; Türkçe imla ve üslup
+                standardizasyonu.
+              </p>
+              <div class="listing-meta">
+                <span class="tag tag-purple">İçerik</span>
+                <span class="tag tag-open">Açık</span>
+                <span class="price-tag">₺350</span>
+              </div>
+            </a>
+            <a class="listing-card" href="task-detail.html?id=1">
+              <h3>Kısa video klibi kesimi (30 sn)</h3>
+              <p>
+                Tanıtım gecesi ham görüntülerinden 30 sn’lik teaser; altyazı
+                yok.
+              </p>
+              <div class="listing-meta">
+                <span class="tag">Video</span>
+                <span class="tag tag-wait">Başvuru değerlendirme</span>
+                <span class="price-tag">₺500</span>
+              </div>
+            </a>
+            <a class="listing-card" href="task-detail.html?id=2">
+              <h3>Basit kulüp sitesi (HTML/CSS)</h3>
+              <p>
+                Tek sayfa etkinlik duyurusu; mor-mavi tema ile teslim (demo
+                fikir).
+              </p>
+              <div class="listing-meta">
+                <span class="tag tag-purple">Yazılım</span>
+                <span class="tag tag-open">Açık</span>
+                <span class="price-tag">₺950</span>
+              </div>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

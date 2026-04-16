@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Görevler — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ilanlar.html">İlanlar</a>
+        <a href="gorevler.html" class="is-active" aria-current="page"
+          >Görevler</a
+        >
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="profil.html">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html">Ana sayfa</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="gorevler.html" class="is-active" aria-current="page"
+              >Görevler</a
+            >
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="profil.html">Profil</a>
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <h1 class="page-title">Görevlerim</h1>
+          <p class="page-sub">
+            Üzerinde çalıştığınız veya sıradaki işler — durum rozetleri demo
+            içindir.
+          </p>
+
+          <div class="status-board">
+            <section class="status-column">
+              <div class="panel">
+                <h3>
+                  Devam ediyor
+                  <span class="badge-count">2</span>
+                </h3>
+                <div class="task-row">
+                  <h4>Kulüp broşürü v2</h4>
+                  <p>İki sütunlu baskı; görsel yerleşim onayı bekleniyor.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-progress">Devam</span>
+                    <span class="tag">Tasarım</span>
+                    <a href="task-detail.html?id=1" style="font-size: 0.75rem"
+                      >İlan detayı →</a
+                    >
+                  </div>
+                </div>
+                <div class="task-row">
+                  <h4>Topluluk sitesi metin düzeltisi</h4>
+                  <p>5 / 8 sayfa tamamlandı; geri kalan bu hafta.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-progress">Devam</span>
+                    <span class="tag tag-purple">İçerik</span>
+                    <a href="task-detail.html?id=4" style="font-size: 0.75rem"
+                      >İlan detayı →</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="status-column">
+              <div class="panel">
+                <h3>
+                  Yapılacaklar
+                  <span class="badge-count">3</span>
+                </h3>
+                <div class="task-row">
+                  <h4>Sosyal medya içerik takvimi</h4>
+                  <p>4 haftalık gönderi metinleri + görsel öneri listesi.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-open">Sırada</span>
+                    <span class="tag">Pazarlama</span>
+                  </div>
+                </div>
+                <div class="task-row">
+                  <h4>Kulüp sunumu şablonu (PPTX)</h4>
+                  <p>Marka renkleri ve tipografi rehberi eklenecek.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-open">Başlanmadı</span>
+                    <span class="tag tag-purple">Sunum</span>
+                  </div>
+                </div>
+                <div class="task-row">
+                  <h4>Fotoğraf seçimi ve kırpma</h4>
+                  <p>Etkinlik arşivinden 24 kare; web için optimize.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-wait">Bilgi bekleniyor</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="status-column">
+              <div class="panel">
+                <h3>
+                  Onay / beklemede
+                  <span class="badge-count">1</span>
+                </h3>
+                <div class="task-row">
+                  <h4>Konferans afişi — baskı öncesi</h4>
+                  <p>PDF proof gönderildi; kulüp başkanı onayı bekleniyor.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-wait">Onay bekliyor</span>
+                    <a href="task-detail.html?id=3" style="font-size: 0.75rem"
+                      >Detay →</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="status-column">
+              <div class="panel">
+                <h3>
+                  Tamamlandı
+                  <span class="badge-count">2</span>
+                </h3>
+                <div class="task-row">
+                  <h4>Ders notu PDF paketi</h4>
+                  <p>Teslim edildi; geri bildirim alındı.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-done">Tamamlandı</span>
+                    <a href="task-detail.html?id=2" style="font-size: 0.75rem"
+                      >Özet →</a
+                    >
+                  </div>
+                </div>
+                <div class="task-row">
+                  <h4>Kulüp logosu — birinci tur</h4>
+                  <p>Revizyon talebi sonrası kapatıldı.</p>
+                  <div class="task-meta" style="margin-top: 0.5rem">
+                    <span class="tag tag-done">Tamamlandı</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <p style="margin-top: 1.5rem; font-size: 0.875rem; color: #64748b">
+            Yeni iş almak için
+            <a href="ilanlar.html">ilanlar</a> sayfasına göz atın.
+          </p>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

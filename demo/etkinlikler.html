@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Etkinlikler — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ilanlar.html">İlanlar</a>
+        <a href="gorevler.html">Görevler</a>
+        <a href="etkinlikler.html" class="is-active" aria-current="page"
+          >Etkinlikler</a
+        >
+        <a href="profil.html">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html">Ana sayfa</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="gorevler.html">Görevler</a>
+            <a href="etkinlikler.html" class="is-active" aria-current="page"
+              >Etkinlikler</a
+            >
+            <a href="profil.html">Profil</a>
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <h1 class="page-title">Kampüs etkinlikleri</h1>
+          <p class="page-sub">
+            Yaklaşan konferanslar, kulüp geceleri ve atölyeler — demo kartlarıdır;
+            kayıt bağlantıları çalışmaz.
+          </p>
+
+          <div class="event-grid">
+            <article class="event-card">
+              <div class="event-card-top">
+                <div class="event-date-badge">
+                  <span class="d">18</span>
+                  <span class="m">Nis</span>
+                </div>
+                <h3>Mühendislik Zirvesi 2026</h3>
+              </div>
+              <div class="event-card-body">
+                Yapay zeka ve sürdürülebilir mühendislik oturumları; ana kampüs
+                konferans salonu.
+                <div class="event-meta">
+                  10:00–17:00 · Konferans Salonu A
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card">
+              <div class="event-card-top">
+                <div class="event-date-badge">
+                  <span class="d">22</span>
+                  <span class="m">Nis</span>
+                </div>
+                <h3>Fotoğrafçılık atölyesi</h3>
+              </div>
+              <div class="event-card-body">
+                Işık ve kompozisyon pratiği; kendi cihazını getir (demo metni).
+                <div class="event-meta">14:00–16:30 · Güzel Sanatlar stüdyosu</div>
+              </div>
+            </article>
+
+            <article class="event-card">
+              <div class="event-card-top">
+                <div class="event-date-badge">
+                  <span class="d">02</span>
+                  <span class="m">May</span>
+                </div>
+                <h3>Kariyer fuarı — startup buluşması</h3>
+              </div>
+              <div class="event-card-body">
+                Yerel startuplar ve mezun mentorları ile hızlı görüşmeler.
+                <div class="event-meta">11:00–15:00 · Spor salonu fuaye</div>
+              </div>
+            </article>
+
+            <article class="event-card">
+              <div class="event-card-top">
+                <div class="event-date-badge">
+                  <span class="d">09</span>
+                  <span class="m">May</span>
+                </div>
+                <h3>Kulüpler gecesi</h3>
+              </div>
+              <div class="event-card-body">
+                Canlı müzik, stantlar ve kulüp tanıtımları; giriş öğrenci kartıyla
+                (sunum).
+                <div class="event-meta">19:00–23:00 · Öğrenci merkezi</div>
+              </div>
+            </article>
+
+            <article class="event-card">
+              <div class="event-card-top">
+                <div class="event-date-badge">
+                  <span class="d">15</span>
+                  <span class="m">May</span>
+                </div>
+                <h3>Açık kaynak sprint günü</h3>
+              </div>
+              <div class="event-card-body">
+                Kısa katkı görevleri ve mentor eşliğinde 4 saatlik kodlama sprinti.
+                <div class="event-meta">10:00–14:00 · Bilgisayar lab 3</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="panel" style="margin-top: 1.5rem">
+            <h3 style="margin-top: 0">Takvimi dışa aktar (demo)</h3>
+            <p style="margin: 0; font-size: 0.875rem; color: #64748b">
+              Gerçek uygulamada .ics bağlantısı olurdu; burada sadece yer tutucu
+              metin bulunur.
+            </p>
+            <button type="button" class="btn" style="margin-top: 0.75rem" disabled>
+              Takvime ekle (devre dışı)
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

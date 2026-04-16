@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Görev detayı — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li>
+            <a href="ilanlar.html" class="is-active" aria-current="page"
+              >İlanlar</a
+            >
+          </li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ilanlar.html" class="is-active" aria-current="page">İlanlar</a>
+        <a href="gorevler.html">Görevler</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="profil.html">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html">Ana sayfa</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ilanlar.html" class="is-active" aria-current="page"
+              >İlanlar</a
+            >
+            <a href="gorevler.html">Görevler</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="profil.html">Profil</a>
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <div class="detail-back">
+            <a href="ilanlar.html#list">← İlanlara dön</a>
+          </div>
+
+          <article
+            class="detail-article"
+            id="detail-root"
+            aria-label="Görev detayı"
+          >
+            <header>
+              <h1 id="detail-title">Görev detayı</h1>
+            </header>
+
+            <div>
+              <div class="detail-label">Açıklama</div>
+              <p class="body-text" id="detail-desc">Yükleniyor…</p>
+            </div>
+
+            <div class="detail-meta" id="detail-meta" hidden></div>
+
+            <div class="detail-extra">
+              <div class="detail-label">Daha detaylı bilgi</div>
+              <p class="detail-extra-box" id="detail-extra">
+                Ek detay sağlanmadı.
+              </p>
+            </div>
+
+            <p style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem">
+              <a class="btn btn-primary" href="ilanlar.html">Tüm ilanlar</a>
+              <a class="btn" href="dashboard.html">Dashboard</a>
+            </p>
+          </article>
+
+          <noscript>
+            <p class="empty-state">
+              Bu sayfa örnek görevleri göstermek için basit JavaScript kullanır.
+              Tarayıcıda JavaScript’i açın veya
+              <a href="ilanlar.html">ilanlara dönün</a>.
+            </p>
+          </noscript>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var TASKS = {
+          "1": {
+            title: "Kulüp logosu ve sosyal medya görseli",
+            description:
+              "Robotik kulübü için modern, okunaklı logo ve Instagram kare/banner varyantları isteniyor.\n\nTeslim: vektör (SVG veya AI) + PNG dışa aktarımları.",
+            budget: "₺800–1200",
+            category: "Tasarım",
+            deadline: "30 Nisan 2026",
+            moreInfo:
+              "Referans olarak mevcut kulüp tişörtündeki renk paleti kullanılacak. İki tur revizyon.",
+          },
+          "2": {
+            title: "Ders notu düzenleme (PDF)",
+            description:
+              "El yazısı taramalarını düzenli PDF’e aktarma; bölüm başlıkları, sayfa numaraları ve basit içindekiler tablosu eklenecek.",
+            budget: "₺400",
+            category: "Düzenleme / Dijital",
+            deadline: "22 Nisan 2026",
+            moreInfo:
+              "Kaynak dosyalar gizlilik nedeniyle yüz yüze USB ile verilecek (demo metni).",
+          },
+          "3": {
+            title: "Konferans afişi — acil",
+            description:
+              "Mühendislik fakültesi etkinliği için A3 afiş tasarımı. Konuşmacı fotoğrafları ve sponsor logoları sağlanacak.",
+            budget: "₺600",
+            category: "Baskıya hazır grafik",
+            deadline: "18 Nisan 2026",
+            moreInfo:
+              "Baskı için 3 mm kesim payı ve CMYK renk profili talep edilir.",
+          },
+          "4": {
+            title: "Web sitesi için metin düzeltisi",
+            description:
+              "Öğrenci topluluğu sitesinde yaklaşık 8 sayfa statik içerik için Türkçe imla, noktalama ve ton uyumu.",
+            budget: "₺350",
+            category: "İçerik",
+            deadline: "5 Mayıs 2026",
+            moreInfo: null,
+          },
+        };
+
+        var params = new URLSearchParams(window.location.search);
+        var id = params.get("id") || "";
+        var task = TASKS[id];
+
+        var titleEl = document.getElementById("detail-title");
+        var descEl = document.getElementById("detail-desc");
+        var metaEl = document.getElementById("detail-meta");
+        var extraEl = document.getElementById("detail-extra");
+
+        if (!task) {
+          titleEl.textContent = "Görev bulunamadı";
+          descEl.textContent =
+            "Geçerli bir görev seçmek için ilanlar listesinden bir karta tıklayın.";
+          metaEl.hidden = true;
+          extraEl.textContent =
+            "Örnek görev kimlikleri: 1, 2, 3, 4 — örn. task-detail.html?id=1";
+          document.title = "Görev bulunamadı — Campus Hub (Demo)";
+          return;
+        }
+
+        titleEl.textContent = task.title;
+        descEl.textContent = task.description;
+
+        var parts = [];
+        if (task.budget) parts.push("Bütçe: " + task.budget);
+        if (task.category) parts.push("Kategori: " + task.category);
+        if (task.deadline) parts.push("Son teslim: " + task.deadline);
+        if (parts.length) {
+          metaEl.hidden = false;
+          metaEl.innerHTML = parts
+            .map(function (line) {
+              return "<p>" + line + "</p>";
+            })
+            .join("");
+        } else {
+          metaEl.hidden = true;
+        }
+
+        if (task.moreInfo) {
+          extraEl.textContent = task.moreInfo;
+        } else {
+          extraEl.textContent = "Ek detay sağlanmadı.";
+        }
+
+        document.title = task.title + " — Campus Hub (Demo)";
+      })();
+    </script>
+  </body>
+</html>

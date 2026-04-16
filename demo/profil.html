@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li>
+            <a href="profil.html" class="is-active" aria-current="page"
+              >Profil</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="ilanlar.html">İlanlar</a>
+        <a href="gorevler.html">Görevler</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="profil.html" class="is-active" aria-current="page">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html">Ana sayfa</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="gorevler.html">Görevler</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="profil.html" class="is-active" aria-current="page"
+              >Profil</a
+            >
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <h1 class="page-title">Profil</h1>
+          <p class="page-sub">
+            Örnek kampüs freelancer profili — sunum için uydurulmuş veriler.
+          </p>
+
+          <div class="profile-hero">
+            <div class="avatar" aria-hidden="true">A</div>
+            <div class="profile-hero-text">
+              <h1>Ayşe Yılmaz</h1>
+              <p class="meta">
+                Bilgisayar Mühendisliği · 3. sınıf · @aysedesign (demo)
+              </p>
+              <div class="profile-stats">
+                <div>
+                  <strong>4.8</strong>
+                  Ortalama puan
+                </div>
+                <div>
+                  <strong>23</strong>
+                  Tamamlanan iş
+                </div>
+                <div>
+                  <strong>6</strong>
+                  Aktif görev
+                </div>
+              </div>
+              <p style="margin: 0.75rem 0 0; font-size: 0.875rem; color: #64748b">
+                İletişim: demo kullanıcı; gerçek e-posta yoktur.
+              </p>
+            </div>
+          </div>
+
+          <div class="stack-gap">
+            <section class="panel">
+              <h3>Yetenekler</h3>
+              <div class="chips" aria-label="Yetenek etiketleri">
+                <span class="chip">UI / görsel tasarım</span>
+                <span class="chip">Figma</span>
+                <span class="chip">HTML &amp; CSS</span>
+                <span class="chip">Sosyal medya içeriği</span>
+                <span class="chip">Sunum şablonları</span>
+                <span class="chip">Kısa kurgu</span>
+              </div>
+            </section>
+
+            <section class="panel">
+              <h3>Tamamlanan işler</h3>
+              <div class="job-row">
+                <div>
+                  <strong>Kulüp hoodie grafikleri</strong>
+                  <div style="font-size: 0.75rem; color: #94a3b8">
+                    Tasarım · Mart 2026
+                  </div>
+                </div>
+                <span class="tag tag-done">Teslim edildi</span>
+              </div>
+              <div class="job-row">
+                <div>
+                  <strong>Hackathon duyuru sitesi (statik)</strong>
+                  <div style="font-size: 0.75rem; color: #94a3b8">
+                    Yazılım · Şubat 2026
+                  </div>
+                </div>
+                <span class="tag tag-done">Teslim edildi</span>
+              </div>
+              <div class="job-row">
+                <div>
+                  <strong>Mezuniyet töreni davetiyesi</strong>
+                  <div style="font-size: 0.75rem; color: #94a3b8">
+                    Baskı dosyası · Ocak 2026
+                  </div>
+                </div>
+                <span class="tag tag-done">Teslim edildi</span>
+              </div>
+              <div class="job-row">
+                <div>
+                  <strong>Kariyer fuarı broşür metni</strong>
+                  <div style="font-size: 0.75rem; color: #94a3b8">
+                    İçerik · Aralık 2025
+                  </div>
+                </div>
+                <span class="tag tag-done">Teslim edildi</span>
+              </div>
+            </section>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem">
+              <a class="btn btn-primary" href="dashboard.html">Dashboard</a>
+              <a class="btn" href="ilanlar.html">Yeni ilanlara bak</a>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

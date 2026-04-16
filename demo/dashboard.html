@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard — Campus Hub (Demo)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-nav" role="banner">
+        <a class="brand" href="index.html">Campus Hub</a>
+        <ul class="nav-links" aria-label="Üst menü">
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li>
+            <a href="dashboard.html" class="is-active" aria-current="page"
+              >Dashboard</a
+            >
+          </li>
+          <li><a href="ilanlar.html">İlanlar</a></li>
+          <li><a href="profil.html">Profil</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-primary" href="giris.html">Giriş</a>
+        </div>
+      </header>
+
+      <nav class="mobile-subnav" aria-label="Mobil menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="dashboard.html" class="is-active" aria-current="page"
+          >Dashboard</a
+        >
+        <a href="ilanlar.html">İlanlar</a>
+        <a href="gorevler.html">Görevler</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="profil.html">Profil</a>
+        <a href="giris.html">Giriş</a>
+      </nav>
+
+      <div class="layout-body">
+        <aside class="sidebar" aria-label="Ana gezinme">
+          <div class="sidebar-label">Menü</div>
+          <nav class="sidebar-nav">
+            <a href="index.html">Ana sayfa</a>
+            <a href="dashboard.html" class="is-active" aria-current="page"
+              >Dashboard</a
+            >
+            <a href="ilanlar.html">İlanlar</a>
+            <a href="gorevler.html">Görevler</a>
+            <a href="etkinlikler.html">Etkinlikler</a>
+            <a href="profil.html">Profil</a>
+            <a href="giris.html">Giriş</a>
+          </nav>
+        </aside>
+
+        <main class="main-wrap">
+          <p class="mobile-nav-hint">
+            Tam kenar çubuğu için ekranı genişletin; dar ekranda üstteki yuvarlak
+            menüyü kullanın.
+          </p>
+
+          <p class="welcome-banner" role="status">
+            <strong>Hoş geldiniz.</strong>
+            Campus Hub demo panosundasınız; aşağıda günlük özet, ilanlar ve
+            yaklaşan teslimlerinizi sunum verisi olarak görebilirsiniz.
+          </p>
+
+          <h1 class="page-title">Dashboard</h1>
+          <p class="page-sub">
+            Bu ekran sunum için örnek veriler gösterir. Tüm kartlar ve listeler
+            statiktir.
+          </p>
+
+          <div class="summary-banner">
+            <p>
+              <strong>Bugünün özeti:</strong> 3 yeni başvuru, 2 yaklaşan teslim
+              tarihi ve kulüp başkanlığından onay bekleyen 1 tasarım revizyonu
+              var. İlanlar sayfasından tüm açık pozisyonlara ulaşabilirsiniz.
+            </p>
+            <a class="btn btn-primary" href="ilanlar.html">İlanlara git</a>
+          </div>
+
+          <div class="stats-row" aria-label="Özet istatistikler">
+            <div class="stat-card">
+              <div class="label">Açık ilan</div>
+              <div class="value">12</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Başvurularım</div>
+              <div class="value">5</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Yakın teslim</div>
+              <div class="value">3</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Tamamlanan</div>
+              <div class="value">18</div>
+            </div>
+            <div class="stat-card">
+              <div class="label">Etkinlik (30 gün)</div>
+              <div class="value">7</div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid">
+            <div>
+              <div class="section-head" id="tasks">
+                <h2>Öne çıkan görevler</h2>
+                <a class="link-more" href="ilanlar.html">Tüm ilanlar →</a>
+              </div>
+              <div class="task-grid" role="list">
+                <a
+                  class="task-card"
+                  href="task-detail.html?id=1"
+                  role="listitem"
+                >
+                  <h3>Kulüp logosu ve sosyal medya görseli</h3>
+                  <p>
+                    Robotik kulübü için logo + Instagram kare/banner; vektör
+                    teslimi.
+                  </p>
+                  <div class="task-meta">
+                    <span class="tag tag-open">Açık</span>
+                    <span class="tag tag-purple">Tasarım</span>
+                    <span class="price-tag">₺800–1200</span>
+                  </div>
+                </a>
+                <a
+                  class="task-card"
+                  href="task-detail.html?id=2"
+                  role="listitem"
+                >
+                  <h3>Ders notu düzenleme (PDF)</h3>
+                  <p>
+                    Taranmış notların düzenli PDF’e aktarılması ve içindekiler.
+                  </p>
+                  <div class="task-meta">
+                    <span class="tag tag-open">Açık</span>
+                    <span class="tag">Düzenleme</span>
+                    <span class="price-tag">₺400</span>
+                  </div>
+                </a>
+                <a
+                  class="task-card"
+                  href="task-detail.html?id=3"
+                  role="listitem"
+                >
+                  <h3>Konferans afişi — acil</h3>
+                  <p>
+                    Mühendislik fakültesi etkinliği için A3 afiş; baskıya hazır
+                    çıktı.
+                  </p>
+                  <div class="task-meta">
+                    <span class="tag tag-urgent">Yakın teslim</span>
+                    <span class="tag">Baskı</span>
+                    <span class="price-tag">₺600</span>
+                  </div>
+                </a>
+                <a
+                  class="task-card"
+                  href="task-detail.html?id=4"
+                  role="listitem"
+                >
+                  <h3>Web sitesi metin düzeltisi</h3>
+                  <p>
+                    Topluluk sitesi için imla, noktalama ve ton uyumu (~8
+                    sayfa).
+                  </p>
+                  <div class="task-meta">
+                    <span class="tag tag-open">Açık</span>
+                    <span class="tag tag-purple">İçerik</span>
+                    <span class="price-tag">₺350</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <aside class="panel" aria-labelledby="deadlines-title">
+              <h3 id="deadlines-title">Yaklaşan teslimler</h3>
+              <ul class="deadline-list">
+                <li>
+                  <a href="task-detail.html?id=3">Konferans afişi</a>
+                  <span class="deadline-date">18 Nis</span>
+                </li>
+                <li>
+                  <a href="gorevler.html">Kulüp broşürü v2</a>
+                  <span class="deadline-date">21 Nis</span>
+                </li>
+                <li>
+                  <a href="task-detail.html?id=2">Ders notu PDF</a>
+                  <span class="deadline-date">22 Nis</span>
+                </li>
+                <li>
+                  <a href="ilanlar.html">Sosyal medya içerik takvimi</a>
+                  <span class="deadline-date">25 Nis</span>
+                </li>
+              </ul>
+              <p style="margin: 0.75rem 0 0; font-size: 0.8125rem; color: #64748b">
+                Tarihler demo amaçlıdır.
+              </p>
+            </aside>
+          </div>
+
+          <div class="section-head" style="margin-top: 2rem">
+            <h2>Hızlı erişim</h2>
+          </div>
+          <div class="card-grid">
+            <a class="listing-card" href="gorevler.html">
+              <h3>Görevlerim</h3>
+              <p>Devam eden işler, bekleyen onaylar ve yapılacaklar listesi.</p>
+              <div class="listing-meta">
+                <span class="tag tag-progress">Devam</span>
+              </div>
+            </a>
+            <a class="listing-card" href="etkinlikler.html">
+              <h3>Etkinlik takvimi</h3>
+              <p>Konser, workshop ve kulüp buluşmaları için özet kartlar.</p>
+              <div class="listing-meta">
+                <span class="tag tag-purple">Kampüs</span>
+              </div>
+            </a>
+            <a class="listing-card" href="profil.html">
+              <h3>Profilim</h3>
+              <p>Yetenekler, tamamlanan işler ve iletişim özeti.</p>
+              <div class="listing-meta">
+                <span class="tag tag-open">Örnek kullanıcı</span>
+              </div>
+            </a>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
