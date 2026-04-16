@@ -1,13 +1,14 @@
-import React from "react";
-
 export default function TaskDetail({ task }) {
   if (!task) {
     return (
-      <section style={styles.card} aria-label="Task detail (empty)">
-        <div style={styles.header}>
-          <h2 style={styles.title}>Görev detayı</h2>
+      <section
+        className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+        aria-label="Task detail (empty)"
+      >
+        <div className="mb-3 border-b border-slate-100 pb-3">
+          <h2 className="text-lg font-semibold text-slate-900">Görev detayı</h2>
         </div>
-        <p style={styles.muted}>
+        <p className="text-sm text-slate-500">
           Detayları görmek için listeden bir görev seçin.
         </p>
       </section>
@@ -26,98 +27,51 @@ export default function TaskDetail({ task }) {
     null;
 
   return (
-    <section style={styles.card} aria-label="Task detail">
-      <div style={styles.header}>
-        <h2 style={styles.title}>{title}</h2>
+    <article
+      className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm"
+      aria-label="Task detail"
+    >
+      <header className="mb-3 border-b border-slate-100 pb-3">
+        <h2 className="text-lg font-semibold text-slate-900">{title}</h2>
+      </header>
+
+      <div>
+        <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Açıklama
+        </div>
+        <p className="m-0 whitespace-pre-wrap text-sm leading-6 text-slate-600">
+          {description}
+        </p>
       </div>
 
-      <div style={styles.block}>
-        <div style={styles.label}>Açıklama</div>
-        <p style={styles.text}>{description}</p>
-      </div>
+      {task.budget || task.category || task.deadline ? (
+        <div className="mt-4 space-y-1 text-sm text-slate-500">
+          {task.budget ? <p>Budget: {task.budget}</p> : null}
+          {task.category ? <p>Category: {task.category}</p> : null}
+          {task.deadline ? <p>Deadline: {task.deadline}</p> : null}
+        </div>
+      ) : null}
 
-      <div style={styles.block}>
-        <div style={styles.label}>Daha detaylı bilgi</div>
+      <div className="mt-4">
+        <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-slate-500">
+          Daha detaylı bilgi
+        </div>
         {moreInfo ? (
-          <div style={styles.moreInfoBox}>
+          <div className="rounded-lg border border-slate-100 bg-slate-50 p-3">
             {typeof moreInfo === "string" ? (
-              <p style={styles.text}>{moreInfo}</p>
+              <p className="m-0 whitespace-pre-wrap text-sm leading-6 text-slate-600">
+                {moreInfo}
+              </p>
             ) : (
-              <pre style={styles.pre}>
+              <pre className="m-0 whitespace-pre-wrap break-words font-mono text-xs leading-normal text-slate-700">
                 {JSON.stringify(moreInfo, null, 2)}
               </pre>
             )}
           </div>
         ) : (
-          <p style={styles.muted}>Ek detay sağlanmadı.</p>
+          <p className="m-0 text-sm text-slate-500">Ek detay sağlanmadı.</p>
         )}
       </div>
-    </section>
+    </article>
   );
 }
-
-const styles = {
-  card: {
-    background: "#ffffff",
-    border: "1px solid #e6e8ee",
-    borderRadius: 12,
-    padding: 16,
-    boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
-  },
-  header: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: 12,
-    paddingBottom: 12,
-    borderBottom: "1px solid #f0f2f7",
-    marginBottom: 12,
-  },
-  title: {
-    margin: 0,
-    fontSize: 18,
-    lineHeight: 1.25,
-    color: "#101828",
-  },
-  block: {
-    marginTop: 14,
-  },
-  label: {
-    fontSize: 12,
-    fontWeight: 600,
-    letterSpacing: 0.2,
-    textTransform: "uppercase",
-    color: "#667085",
-    marginBottom: 6,
-  },
-  text: {
-    margin: 0,
-    fontSize: 14,
-    lineHeight: 1.55,
-    color: "#344054",
-    whiteSpace: "pre-wrap",
-  },
-  muted: {
-    margin: 0,
-    fontSize: 14,
-    lineHeight: 1.55,
-    color: "#667085",
-  },
-  moreInfoBox: {
-    background: "#f9fafb",
-    border: "1px solid #eef2f6",
-    borderRadius: 10,
-    padding: 12,
-  },
-  pre: {
-    margin: 0,
-    fontSize: 12,
-    lineHeight: 1.5,
-    color: "#344054",
-    whiteSpace: "pre-wrap",
-    wordBreak: "break-word",
-    fontFamily:
-      'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
-  },
-};
-
